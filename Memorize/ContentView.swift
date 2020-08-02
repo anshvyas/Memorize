@@ -10,15 +10,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        //This aligns the returned views horizontally.
+        HStack{
+            //This returns 5 different cards aligned randomly
+            ForEach(0..<5) {_ in
+                Card()
+            }
+        }
+        .padding()
+            //This is passed to the inner subviews. It doesn't apply for HStack
+            .foregroundColor(.orange)
+    }
+}
+
+//MARK: Layout for card.
+struct Card: View {
+    var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16.0).fill(Color.white)
             RoundedRectangle(cornerRadius: 16.0).stroke(lineWidth: 2.0)
             Text("👻").font(.largeTitle)
         }
-        .padding()
-            //The foreground color doesn't make sense for a Zstack.
-            //So it is passed down to all the views inside it.
-            .foregroundColor(.orange)
     }
 }
 
