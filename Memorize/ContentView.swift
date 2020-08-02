@@ -13,8 +13,8 @@ struct ContentView: View {
         //This aligns the returned views horizontally.
         HStack{
             //This returns 5 different cards aligned randomly
-            ForEach(0..<5) {_ in
-                Card()
+            ForEach(0..<5) { index in
+                CardView(isFaceUp: (index % 2 == 0))
             }
         }
         .padding()
@@ -24,12 +24,19 @@ struct ContentView: View {
 }
 
 //MARK: Layout for card.
-struct Card: View {
+struct CardView: View {
+    let isFaceUp: Bool
+    
     var body: some View {
+        //This stacks views on top of one another along the z-axis.
         ZStack {
-            RoundedRectangle(cornerRadius: 16.0).fill(Color.white)
-            RoundedRectangle(cornerRadius: 16.0).stroke(lineWidth: 2.0)
-            Text("👻").font(.largeTitle)
+            if isFaceUp {
+                RoundedRectangle(cornerRadius: 16.0).fill(Color.white)
+                RoundedRectangle(cornerRadius: 16.0).stroke(lineWidth: 2.0)
+                Text("👻").font(.largeTitle)
+            } else {
+                RoundedRectangle(cornerRadius: 16.0)
+            }
         }
     }
 }
