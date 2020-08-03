@@ -11,6 +11,16 @@ import Foundation
 struct MemoryGame<CardContent> {
     let cards: [Card]
     
+    init(cardPairs: Int, cardContentFactory: (Int) -> CardContent) {
+        var cards: [Card] = []
+        for pairIndex in 0..<cardPairs {
+            let cardContent = cardContentFactory(pairIndex)
+            cards.append(Card(isFaceUp: false, isMatched: false, content: cardContent))
+            cards.append(Card(isFaceUp: false, isMatched: false, content: cardContent))
+        }
+        
+        self.cards = cards
+    }
     func choose(card: Card) {
         print("Card Chosen: \(card)")
     }
