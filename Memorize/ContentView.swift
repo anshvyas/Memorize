@@ -16,7 +16,9 @@ struct ContentView: View {
         HStack{
             //This returns 5 different cards aligned randomly
             ForEach(emojiGameViewModel.cards) { card in
-                CardView(card: card)
+                CardView(card: card).onTapGesture {
+                    self.emojiGameViewModel.choose(card: card)
+                }
             }
         }
         .padding()
