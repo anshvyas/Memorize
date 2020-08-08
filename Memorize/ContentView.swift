@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    let emojiGameViewModel: EmojiMemoryGame
+    
     var body: some View {
         //This aligns the returned views horizontally.
         HStack{
             //This returns 5 different cards aligned randomly
-            ForEach(0..<5) { index in
-                CardView(isFaceUp: (index % 2 == 0))
+            ForEach(emojiGameViewModel.cards) { card in
+                CardView(card: card)
             }
         }
         .padding()
@@ -25,15 +27,15 @@ struct ContentView: View {
 
 //MARK: Layout for card.
 struct CardView: View {
-    let isFaceUp: Bool
+    let card: MemoryGame<String>.Card
     
     var body: some View {
         //This stacks views on top of one another along the z-axis.
         ZStack {
-            if isFaceUp {
+            if card.isFaceUp {
                 RoundedRectangle(cornerRadius: 16.0).fill(Color.white)
                 RoundedRectangle(cornerRadius: 16.0).stroke(lineWidth: 2.0)
-                Text("👻").font(.largeTitle)
+                Text(card.content).font(.largeTitle)
             } else {
                 RoundedRectangle(cornerRadius: 16.0)
             }
@@ -44,6 +46,6 @@ struct CardView: View {
 //MARK: This is for preview pane.
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(emojiGameViewModel: EmojiMemoryGame(cardPairs: 2))
     }
 }

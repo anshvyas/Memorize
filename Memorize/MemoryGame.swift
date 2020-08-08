@@ -15,8 +15,8 @@ struct MemoryGame<CardContent> {
         var cards: [Card] = []
         for pairIndex in 0..<cardPairs {
             let cardContent = cardContentFactory(pairIndex)
-            cards.append(Card(isFaceUp: false, isMatched: false, content: cardContent))
-            cards.append(Card(isFaceUp: false, isMatched: false, content: cardContent))
+            cards.append(Card(id: pairIndex * 2, isFaceUp: true, isMatched: false, content: cardContent))
+            cards.append(Card(id: pairIndex * 2 + 1, isFaceUp: true, isMatched: false, content: cardContent))
         }
         
         self.cards = cards
@@ -25,7 +25,8 @@ struct MemoryGame<CardContent> {
         print("Card Chosen: \(card)")
     }
     
-    struct Card {
+    struct Card: Identifiable {
+        var id: Int
         let isFaceUp: Bool
         let isMatched: Bool
         let content: CardContent

@@ -12,7 +12,7 @@ class EmojiMemoryGame {
     private let memoryGame: MemoryGame<String>
     
     init(cardPairs: Int) {
-        let emojis: [String] = ["👻", "🎃"]
+        let emojis: [String] = ["👻", "🎃", "🕷"]
         self.memoryGame = MemoryGame<String>(cardPairs: cardPairs) { (pairIndex) -> String in
             return emojis[pairIndex % emojis.count]
         }
