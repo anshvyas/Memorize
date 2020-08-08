@@ -19,7 +19,7 @@ struct MemoryGame<CardContent> {
             cards.append(Card(id: pairIndex * 2 + 1, isFaceUp: true, isMatched: false, content: cardContent))
         }
         
-        self.cards = cards
+        self.cards = cards.shuffled()
     }
     func choose(card: Card) {
         print("Card Chosen: \(card)")
