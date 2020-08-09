@@ -9,7 +9,7 @@
 import Foundation
 
 struct MemoryGame<CardContent> {
-    let cards: [Card]
+    var cards: [Card]
     
     init(cardPairs: Int, cardContentFactory: (Int) -> CardContent) {
         var cards: [Card] = []
@@ -21,13 +21,17 @@ struct MemoryGame<CardContent> {
         
         self.cards = cards.shuffled()
     }
-    func choose(card: Card) {
+    
+    mutating func choose(card: Card) {
         print("Card Chosen: \(card)")
+        if let chosenIndex = self.cards.firstIndex(where: { $0.id == card.id }) {
+            self.cards[chosenIndex].isFaceUp = !self.cards[chosenIndex].isFaceUp
+        }
     }
     
     struct Card: Identifiable {
-        var id: Int
-        let isFaceUp: Bool
+        let id: Int
+        var isFaceUp: Bool
         let isMatched: Bool
         let content: CardContent
     }

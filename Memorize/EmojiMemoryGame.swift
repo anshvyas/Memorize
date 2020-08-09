@@ -9,7 +9,7 @@
 import Foundation
 
 class EmojiMemoryGame {
-    private let memoryGame: MemoryGame<String>
+    private var memoryGame: MemoryGame<String>
     
     init(cardPairs: Int) {
         let emojis: [String] = ["👻", "🎃", "🕷"]
