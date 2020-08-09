@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
     let emojiGameViewModel: EmojiMemoryGame
     
     var body: some View {
@@ -48,6 +48,6 @@ struct CardView: View {
 //MARK: This is for preview pane.
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(emojiGameViewModel: EmojiMemoryGame(cardPairs: 2))
+        GameView(emojiGameViewModel: EmojiMemoryGame(cardPairs: 2))
     }
 }

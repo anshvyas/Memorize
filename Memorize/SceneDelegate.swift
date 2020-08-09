@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Create the SwiftUI view that provides the window contents.
         let cardPairs = Int.random(in: 2...5)
-        let contentView = ContentView(emojiGameViewModel: EmojiMemoryGame(cardPairs: cardPairs))
+        let contentView = GameView(emojiGameViewModel: EmojiMemoryGame(cardPairs: cardPairs))
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
