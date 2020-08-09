@@ -8,8 +8,8 @@
 
 import Foundation
 
-class EmojiMemoryGame {
-    private var memoryGame: MemoryGame<String>
+class EmojiMemoryGame: ObservableObject {
+    @Published private var memoryGame: MemoryGame<String>
     
     init(cardPairs: Int) {
         let emojis: [String] = ["👻", "🎃", "🕷"]
