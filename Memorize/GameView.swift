@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct GameView: View {
-    let emojiGameViewModel: EmojiMemoryGame
+    @ObservedObject var emojiGameViewModel: EmojiMemoryGame
     
     var body: some View {
         //This aligns the returned views horizontally.
