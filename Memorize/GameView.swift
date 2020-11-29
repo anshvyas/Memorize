@@ -17,7 +17,7 @@ struct GameView: View {
             //This returns 5 different cards aligned randomly
             ForEach(emojiGameViewModel.cards) { card in
                 CardView(card: card).onTapGesture {
-                    self.emojiGameViewModel.choose(card: card)
+                    emojiGameViewModel.choose(card: card)
                 }
             }
         }
