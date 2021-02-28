@@ -15,6 +15,7 @@
 		48C3113324D6FA81004D244A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C3113124D6FA81004D244A /* LaunchScreen.storyboard */; };
 		48C3113B24D85C5D004D244A /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3113A24D85C5D004D244A /* MemoryGame.swift */; };
 		48C3113D24D863F6004D244A /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3113C24D863F6004D244A /* EmojiMemoryGame.swift */; };
+		48EAF82625EBAB8200422783 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAF82525EBAB8200422783 /* ViewConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		48C3113424D6FA81004D244A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C3113A24D85C5D004D244A /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		48C3113C24D863F6004D244A /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		48EAF82525EBAB8200422783 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				48C3113124D6FA81004D244A /* LaunchScreen.storyboard */,
 				48C3113424D6FA81004D244A /* Info.plist */,
 				48C3112E24D6FA81004D244A /* Preview Content */,
+				48EAF82525EBAB8200422783 /* ViewConstants.swift */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EAF82625EBAB8200422783 /* ViewConstants.swift in Sources */,
 				48C3112724D6FA7E004D244A /* AppDelegate.swift in Sources */,
 				48C3112924D6FA7E004D244A /* SceneDelegate.swift in Sources */,
 				48C3113B24D85C5D004D244A /* MemoryGame.swift in Sources */,
@@ -224,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
